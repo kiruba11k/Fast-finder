@@ -1,0 +1,84 @@
+.search-bar {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 16px;
+  }
+  
+  input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+    outline: none;
+  }
+  
+  .suggestions-list {
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    max-height: 200px;
+    color: #282c34;
+    overflow-y: auto;
+    z-index: 1000;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .suggestions-list.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .suggestion-item {
+    padding: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .suggestion-item:hover,
+  .suggestion-item.highlighted {
+    background-color: #e9ecef;
+    transform: scale(1.02);
+  }
+  
+  .suggestion-item.highlighted {
+    background-color: #d0e0f0;   
+}
+  
+  .icon {
+    margin-right: 12px;
+    color: #007bff;
+    font-size: 18px;
+  }
+  
+  .highlight {
+    background-color: #ffeb3b;
+    font-weight: bold;
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+  
